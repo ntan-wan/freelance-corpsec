@@ -1,0 +1,122 @@
+[
+  {
+    "createdAt": "2024-07-24T08:30:00.000Z",
+    "img": "/imgs/dummy1.jpg",
+    "title": "Meet a web designer in his studio in Amsterdam",
+    "description": "we'll get to know the designer and their design philosophy, as well as take a look",
+    "tags": [
+      {
+        "label": "Web Design",
+        "category": "web"
+      },
+      {
+        "label": "Studio",
+        "category": "studio"
+      },
+      {
+        "label": "UI/UX",
+        "category": "ui"
+      },
+      {
+        "label": "UI/UX",
+        "category": "ui"
+      },
+      {
+        "label": "UI/UX",
+        "category": "ui"
+      },
+      {
+        "label": "UI/UX",
+        "category": "ui"
+      },
+      {
+        "label": "UI/UX",
+        "category": "ui"
+      }
+    ],
+    "author": {
+      "name": "John Doe",
+      "avatar": "/imgs/dummy1.jpg"
+    }
+  },
+  {
+    "createdAt": "2024-07-24T08:30:00.000Z",
+    "img": "/imgs/dummy2.jpg",
+    "title": "The Evolution of UI/UX Design: From Skeuomorphism to Flat Design",
+    "description": "Discussing the shift from realistic designs to minimalistic, flat designs.",
+    "tags": [
+      {
+        "label": "Web Design",
+        "category": "web"
+      },
+      {
+        "label": "Studio",
+        "category": "studio"
+      },
+      {
+        "label": "UI/UX",
+        "category": "ui"
+      },
+      {
+        "label": "UI/UX",
+        "category": "ui"
+      },
+      {
+        "label": "UI/UX",
+        "category": "ui"
+      },
+      {
+        "label": "UI/UX",
+        "category": "ui"
+      },
+      {
+        "label": "UI/UX",
+        "category": "ui"
+      }
+    ],
+    "author": {
+      "name": "John Doe",
+      "avatar": "/imgs/dummy1.jpg"
+    }
+  },
+  {
+    "createdAt": "2024-07-24T08:30:00.000Z",
+    "img": "/imgs/dummy3.jpg",
+    "title": "The Importance of User-Centered Design in IT Projects",
+    "description": "Exploring the significance of putting the user first in IT projects",
+    "tags": [
+      {
+        "label": "Web Design",
+        "category": "web"
+      },
+      {
+        "label": "Studio",
+        "category": "studio"
+      },
+      {
+        "label": "UI/UX",
+        "category": "ui"
+      },
+      {
+        "label": "UI/UX",
+        "category": "ui"
+      },
+      {
+        "label": "UI/UX",
+        "category": "ui"
+      },
+      {
+        "label": "UI/UX",
+        "category": "ui"
+      },
+      {
+        "label": "UI/UX",
+        "category": "ui"
+      }
+    ],
+    "author": {
+      "name": "John Doe",
+      "avatar": "/imgs/dummy1.jpg"
+    }
+  }
+]

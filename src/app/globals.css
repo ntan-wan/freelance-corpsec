@@ -16,22 +16,25 @@
 
 @layer utilities {
 
+	.c-section {
+		min-height: calc(100vh - 74px);
+	}
 
 	.c-text-gray {
 		@apply text-gray-500;
-	}
-
-	.c-text-lg {
-		@apply text-3xl;
-	}
-	.c-text-sm {
-		@apply text-sm;
 	}
 
 	.c-title-lg {
 		@apply text-5xl font-semibold;
 	}
 	.c-title {
-		@apply c-text-lg font-semibold;
+		@apply text-4xl font-semibold;
+	}
+	.c-title-sm {
+		@apply text-xl font-semibold;
+	}
+
+	.c-paragraph {
+		@apply text-lg;
 	}
 }

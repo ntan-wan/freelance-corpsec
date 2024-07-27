@@ -2,26 +2,21 @@ import Image from "next/image";
 import { CustomTag } from "@/components/ui/CustomTag";
 import { CustomAvatar } from "@/components/ui/CustomAvatar";
 
-export function BlogCard() {
-  const data = {
-	createdAt: "2024-07-24T08:30:00.000Z",
-    img: "/imgs/dummy1.jpg",
-    title: "Meet a web designer in his studio in Amsterdam",
-    description: "we'll get to know the designer and their design philosophy, as well as take a look",
-    tags: [
-      { label: "Web Design", category: "web" },
-      { label: "Studio", category: "studio" },
-      { label: "UI/UX", category: "ui" },
-      { label: "UI/UX", category: "ui" },
-      { label: "UI/UX", category: "ui" },
-      { label: "UI/UX", category: "ui" },
-      { label: "UI/UX", category: "ui" },
-    ],
-    author: {
-      name: "John Doe",
-      avatar: "/imgs/dummy1.jpg",
-    },
-  };
+interface IBlog {
+  createdAt: string;
+  img: string;
+  title: string;
+  description: string;
+  tags: { label: string; category: string }[];
+  author: { name: string; avatar: string };
+}
+
+interface IProps {
+  data: IBlog;
+  className?: string;
+}
+
+export function BlogCard({ data, className, ...props }: IProps) {
 
   const getTagVariant: (category: string) => string = (category: string) => {
     const categories: { [key: string]: string } = {
@@ -35,12 +30,12 @@ export function BlogCard() {
 
   return (
     <div>
-      <div className="">
-        <Image className="rounded-2xl w-full" src={data.img} alt="Blog Image" width={500} height={500} />
+      <div className="relative h-60">
+        <Image className="rounded-2xl w-full object-cover" src={data.img} alt="Blog Image" fill />
       </div>
 
       <div className="mt-4 flex items-center gap-2">
-		<CustomAvatar />
+        <CustomAvatar />
         <div>
           <p className="text-sm">{data.author.name}</p>
           <p className="text-xs c-text-gray">May 9, 2023</p>
