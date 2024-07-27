@@ -20,7 +20,7 @@ export function CustomFooter({ className }: IProps) {
 
   return (
     <footer className={cn("p-4", className)}>
-      <div className="px-8 flex items-center justify-between">
+      <div className="px-8 flex flex-col lg:flex-row lg:items-center lg:justify-between">
         <div className="flex flex-col gap-6">
           <p className="flex items-center gap-2">
             <span className="c-logo">Logo</span>
@@ -36,7 +36,7 @@ export function CustomFooter({ className }: IProps) {
           </div>
         </div>
 
-        <div className="flex gap-28">
+        <div className="flex flex-wrap gap-12 lg:gap-28">
           <ul className="flex flex-col gap-4">
             <li className="c-paragraph">Products</li>
             {products.map((item) => (

@@ -35,12 +35,11 @@ export function CustomButton({ label, className, iconClassName, variant = "defau
   const renderView = () => {
     if (icon || label) {
       return (
-        <div className={cn("flex items-center gap-3")}>
+        <div className={cn("flex items-center justify-center gap-3")}>
           {icon && <CustomIcon name={icon} className={cn(...iconClassArgs)} />}
           {label && <span>{label}</span>}
         </div>
       );
-    } else if (false) {
     } else {
       return <span>{label}</span>;
     }

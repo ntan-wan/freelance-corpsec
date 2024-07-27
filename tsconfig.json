@@ -23,6 +23,7 @@
 	  "@/hooks/*": ["./src/hooks/*"],
 	  "@/utils/*": ["./src/utils/*"],
 	  "@/types/*": ["./src/types/*"],
+	  "@/providers/*": ["./src/providers/*"],
 	  "@/json/*": ["./public/jsons/*"]
     }
   },

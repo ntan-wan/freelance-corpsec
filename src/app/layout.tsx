@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import { CustomNavbar } from "@/components/layouts/CustomNavbar";
 import { CustomFooter } from "@/components/layouts/CustomFooter";
 import "./globals.css";
+import { CustomSidebar } from "@/components/ui/CustomSidebar";
+import { GlobalProvider } from "@/providers/GlobalProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,13 +18,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <CustomNavbar/>
-        <div className="container">{children}</div>
-        <CustomFooter className="mt-auto" />
-      </body>
+      <GlobalProvider>
+        <body className={inter.className}>
+          <CustomNavbar />
+          <CustomSidebar />
+          <div className="container">{children}</div>
+          <CustomFooter className="mt-auto" />
+        </body>
+      </GlobalProvider>
     </html>
   );
 }
