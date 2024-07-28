@@ -10,26 +10,27 @@ const inter = Inter({ subsets: ["latin"] });
 const CustomSidebar = dynamic(() => import("@/components/ui/CustomSidebar").then((mod) => mod.CustomSidebar));
 
 export const metadata: Metadata = {
-  title: "Corpsec",
-  description:
-    "Incorporating a company as a service provides businesses with streamlined, expert assistance in legally forming and registering their corporation, ensuring compliance with all necessary regulations.",
+    title: "Corpsec",
+    description:
+        "Incorporating a company as a service provides businesses with streamlined, expert assistance in legally forming and registering their corporation, ensuring compliance with all necessary regulations.",
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <GlobalProvider>
-        <body className={inter.className}>
-          <CustomNavbar />
-          <CustomSidebar />
-          <div className="container">{children}</div>
-          <CustomFooter className="mt-auto" />
-        </body>
-      </GlobalProvider>
-    </html>
-  );
+
+    return (
+        <html lang="en">
+            <GlobalProvider>
+                <body className={inter.className}>
+                    <CustomNavbar />
+                    <CustomSidebar />
+                    <div className="container">{children}</div>
+                    <CustomFooter className="mt-auto" />
+                </body>
+            </GlobalProvider>
+        </html>
+    );
 }
