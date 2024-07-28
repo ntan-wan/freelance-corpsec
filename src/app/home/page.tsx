@@ -113,7 +113,7 @@ export default function HomePage() {
           ))}
         </div>
 
-        <div className="mt-8 lg:mt-10 text-center border border-blue-50 bg-blue-50 p-4 rounded-md w-full mx-auto lg:w-6/12 ">
+        <div className="mt-8 lg:mt-10 text-center border border-blue-50 bg-blue-50 p-4 sm:p-8 rounded-md w-full mx-auto lg:w-6/12 ">
           <h2 className="font-semibold text-xl">Still have questions?</h2>
           <p className="mt-3 c-text-gray text-[14px]">
             We&apos;re sorry we couldn&apos;t provide with the information you were looking for. Please contact us and we&apos;ll be happy to help.
