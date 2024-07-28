@@ -28,7 +28,7 @@
 		@apply text-5xl font-semibold;
 	}
 	.c-title {
-		@apply text-4xl font-semibold;
+		@apply text-[28px] lg:text-4xl font-semibold;
 	}
 	.c-title-sm {
 		@apply text-xl font-semibold;

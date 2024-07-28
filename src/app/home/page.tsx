@@ -7,6 +7,7 @@ import Image from "next/image";
 import { QuestionAccordion } from "@/components/ui/QuestionAccordion";
 import blogs from '@/json/blogs.json';
 import FAQ from '@/json/FAQ.json';
+import { CustomTag } from "@/components/ui/CustomTag";
 
 export default function HomePage() {
   const clients : {label: string, icon: HeroIcons}[] = [
@@ -29,16 +30,16 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="c-section flex flex-col lg:flex-row lg:justify-between lg:items-center gap-8">
+      <section className="c-section flex flex-col lg:flex-row lg:justify-between lg:items-center gap-12 lg:gap-8">
         <div className="w-full lg:w-6/12">
-          <h1 className="c-title-lg">Everything you need to scale a global team</h1>
+          <h1 className="text-4xl pt-12 lg:pt-0 font-semibold lg:c-title-lg">Everything you need to scale a global team</h1>
           <p className="mt-4 c-text-gray c-paragraph w-11/12">Check out our proven methods, guides, and exercises that help make work better, and people happier.</p>
-          <div className="mt-12 flex flex-col gap-4 lg:flex-row lg:items-center">
+          <div className="mt-8 flex flex-col gap-3 lg:flex-row lg:items-center">
             <CustomButton label="Learn More" />
             <CustomButton label="Watch Demo" icon="PlayCircleIcon" variant="outlined" />
           </div>
 
-          <p className="mt-8 c-text-gray">Trusted by over than 1M customers</p>
+          <p className="mt-6 c-text-gray">Trusted by over than 1M customers</p>
           <div className="mt-2 flex gap-2">
             {Array.from({ length: 5 }).map((_, index) => (
               <CustomIcon key={index} name="StarIcon" />
@@ -52,11 +53,12 @@ export default function HomePage() {
       </section>
 
       {/* Benefits */}
-      <section className="pt-24 c-section">
-        <h2 className="c-title text-center">Our key benefits</h2>
+      <section className="pt-16 c-section">
+		<div className="flex justify-center"><CustomTag label="Key Benefits"/></div>
+        <h2 className="mt-2 c-title text-center">Our key benefits</h2>
         <p className="mt-2 c-text-gray text-center">Our services are designed to cater to your specific needs and goals.</p>
-        <div className="pt-20 flex flex-col gap-4 lg:flex-row lg:items-center">
-          <div className="flex flex-col w-full gap-8 lg:w-6/12">
+        <div className="pt-8 lg:pt-20 flex flex-col gap-12 lg:gap-14 lg:flex-row lg:items-center">
+          <div className="flex flex-col w-full gap-12 lg:w-6/12">
             {benefits.map((item) => (
               <div className="" key={item.label}>
                 <CustomIcon name={item.icon as HeroIcons} />
@@ -66,7 +68,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="grid grid-cols-2 grid-rows-12 gap-8 w-full  min-h-[500px] lg:w-6/12">
+          <div className="grid grid-cols-2 grid-rows-12 gap-4 lg:gap-8 w-full  min-h-[500px] lg:w-6/12">
             <div className="row-start-1 row-end-9 bg-cover rounded-md relative">
               <Image className="rounded-md object-cover" sizes="" src="/imgs/dummy-benefit1.jpg" fill alt="dummy" />
             </div>
@@ -84,51 +86,52 @@ export default function HomePage() {
       </section>
 
       {/* Get Started */}
-      <section className="c-section flex flex-col justify-center">
+      <section className="c-section flex flex-col justify-center pt-16">
         <h2 className="c-title text-center"> Streamline your workflow with Saas: Get started now</h2>
         <p className="mt-3 text-center c-paragraph c-text-gray">Stay up to date with the most relevant information</p>
-        <ul className="mt-8 flex flex-col gap-4 items-center lg:flex-row lg:justify-center">
+        <ul className="mt-8 flex flex-col gap-3 items-center sm:flex-row sm:justify-center">
           {features.map((item) => (
-            <li className="p-4 flex  gap-2 c-paragraph flex-row items-center" key={item.label}>
+            <li className="flex  gap-2 c-paragraph flex-row items-center" key={item.label}>
               <CustomIcon name="CheckBadgeIcon" /> {item.label}
             </li>
           ))}
         </ul>
-        <div className="mt-10 flex flex-col items-center justify-center gap-4 lg:flex-row">
+        <div className="mt-10 flex flex-col items-center justify-center gap-3 lg:flex-row">
           <CustomButton label="Get Started" className="w-full lg:w-auto" />
           <CustomButton label="Watch Demo" icon="PlayCircleIcon" variant="outlined" className="w-full lg:w-auto" />
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="c-section">
+      <section className="c-section pt-16">
         <h2 className="c-title text-center">Frequently Asked Questions</h2>
         <p className="mt-3 text-center c-paragraph c-text-gray">We tried to answer most of the questions, if you have any additional, please get in touch with our friendly team</p>
 
-        <div className="mt-12 w-full mx-auto flex flex-col gap-4 lg:w-[50vw]">
+        <div className="mt-14 w-full mx-auto flex flex-col gap-3 lg:w-[50vw]">
           {FAQ.map((item, i) => (
             <QuestionAccordion key={i} question={item.question} ans={item.ans} />
           ))}
         </div>
 
-        <div className="mt-10 text-center border border-blue-50 bg-blue-50 p-4 rounded-md w-full mx-auto lg:w-6/12 ">
+        <div className="mt-8 lg:mt-10 text-center border border-blue-50 bg-blue-50 p-4 rounded-md w-full mx-auto lg:w-6/12 ">
           <h2 className="font-semibold text-xl">Still have questions?</h2>
-          <p className="mt-2 c-text-gray c-paragraph">
+          <p className="mt-3 c-text-gray text-[14px]">
             We&apos;re sorry we couldn&apos;t provide with the information you were looking for. Please contact us and we&apos;ll be happy to help.
           </p>
           <div className="mt-8 flex justify-center">
-            <CustomButton label="Contact Us" icon="EnvelopeIcon" />
+            <CustomButton iconClassName="size-5" className="text-[14px]" label="Contact Us" icon="EnvelopeIcon" />
           </div>
         </div>
       </section>
 
       {/* News */}
-      <section className="pt-32 c-section">
-        <h2 className="c-title text-center">Our Fresh News</h2>
+      <section className="pt-16 lg:pt-32 c-section">
+		<div className="flex justify-center"><CustomTag label="Blog"/></div>
+        <h2 className="mt-2 c-title text-center">Our Fresh News</h2>
         <p className="mt-2 c-text-gray text-center">
           Our blog is more than just a collection of articles - it&apos;s a hub of ideas, inspiration, and thought-provoking discussions
         </p>
-        <div className="mt-8 flex flex-col gap-4 lg:flex-row">
+        <div className="mt-8 flex flex-col gap-12 lg:gap-4 lg:flex-row">
           {blogs.map((item, i) => (
             <BlogCard key={i} data={item} />
           ))}
@@ -137,9 +140,9 @@ export default function HomePage() {
 
       {/* Email */}
       <section className="pt-16 flex flex-col justify-center">
-        <div className="bg-blue-50 rounded-2xl p-12">
+        <div className="bg-blue-50 rounded-2xl p-4 lg:p-12">
           <div className="w-full lg:w-6/12">
-            <p className="c-title">Enter your email and get started for free</p>
+            <p className="c-title">Enter your email address and get started for free</p>
             <p className="mt-4 c-text-gray">Stay up to date with the most relevant information, our new collections, news and special offers!</p>
             <div className="mt-8 flex flex-col gap-4 lg:flex-row lg:items-center">
               <CustomInput placeholder="Enter your email" className="w-full" />
@@ -150,7 +153,7 @@ export default function HomePage() {
       </section>
 
       {/* Clients */}
-      <section className="min-h-[calc(100vh-74px-349px)] pt-28">
+      <section className="min-h-[calc(100vh-74px-349px)] pt-16 lg:pt-28">
         <h2 className="c-title text-center">Our Clients</h2>
         <div className="mt-8 flex flex-wrap items-center justify-center">
           {clients.map((item) => (

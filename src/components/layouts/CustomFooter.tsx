@@ -19,10 +19,10 @@ export function CustomFooter({ className }: IProps) {
   ];
 
   return (
-    <footer className={cn("p-4", className)}>
+    <footer className={cn("p-4 pt-24", className)}>
       <div className="px-8 flex flex-col lg:flex-row lg:items-center lg:justify-between">
         <div className="flex flex-col gap-6">
-          <p className="flex items-center gap-2">
+          <p className="flex items-center gap-2 text-xl">
             <span className="c-logo">Logo</span>
             <span>Whitespace UI</span>
           </p>
@@ -36,7 +36,7 @@ export function CustomFooter({ className }: IProps) {
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-12 lg:gap-28">
+        <div className="mt-8 lg:mt-0 flex flex-wrap gap-12 lg:gap-28">
           <ul className="flex flex-col gap-4">
             <li className="c-paragraph">Products</li>
             {products.map((item) => (
@@ -77,7 +77,7 @@ export function CustomFooter({ className }: IProps) {
 
 	  <CustomDivider />
 
-	  <div className="px-8 flex items-center justify-between">
+	  <div className="lg:px-8 flex flex-col c-text-gray gap-3 lg:flex-row items-center justify-between">
 			<div>&copy;2024 All rights reserved</div>
 			<div>Term of Service | Privacy Policy</div>
 	  </div>

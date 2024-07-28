@@ -12,7 +12,7 @@ interface IProps {
 export function CustomNavbar({ sticky = true, className }: IProps) {
   const menuItems = [{ label: "Home" }, { label: "Features" }, { label: "About us" }, { label: "News" }, { label: "Contact" }];
   const style = {
-    base: "flex items-center justify-between p-4 bg-white",
+    base: "flex items-center justify-between p-4 bg-white border-b border-b-gray-200",
     sticky: "sticky top-0 w-full z-10",
   };
   const {globalState, setState} : {[key : string] : any} = useGlobal();
