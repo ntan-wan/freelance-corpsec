@@ -61,7 +61,7 @@ export function CustomSidebar({ position = "left", isOpen = false, title = "Menu
         <ul className="px-4">
           {items.map((item) => (
             <li key={item.label} className="text-gray-900">
-              <Link className="block w-full py-2 hover:bg-blue-50 transition-colors" href="/">
+              <Link className="block w-full px-2 py-2 hover:bg-primary-50 transition-colors" href="/">
                 {item.label}
               </Link>
             </li>

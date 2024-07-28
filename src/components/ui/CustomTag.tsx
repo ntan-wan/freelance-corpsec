@@ -7,7 +7,7 @@ interface IProps {
 
 const styles : {[key : string] : string} = {
   base: "p-1 rounded-md border border-gray-300 text-sm",
-  primary: 'bg-blue-100 border-blue-100 text-blue-600',
+  primary: 'bg-primary-100 border-primary-100 text-primary-600',
   success: 'bg-green-100 border-green-100 text-green-600',
 };
 

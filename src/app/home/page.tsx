@@ -32,7 +32,7 @@ export default function HomePage() {
       {/* Hero */}
       <section className="c-section flex flex-col lg:flex-row lg:justify-between lg:items-center gap-12 lg:gap-8">
         <div className="w-full lg:w-6/12">
-          <h1 className="text-4xl pt-12 lg:pt-0 font-semibold lg:c-title-lg">Everything you need to scale a global team</h1>
+          <h1 className="text-4xl pt-12 lg:pt-0 font-semibold lg:c-title-lg lg:!leading-[1.3]">Everything you need to scale a global team</h1>
           <p className="mt-4 c-text-gray c-paragraph w-11/12">Check out our proven methods, guides, and exercises that help make work better, and people happier.</p>
           <div className="mt-8 flex flex-col gap-3 lg:flex-row lg:items-center">
             <CustomButton label="Learn More" />

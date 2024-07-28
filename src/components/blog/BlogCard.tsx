@@ -1,15 +1,8 @@
 import Image from "next/image";
 import { CustomTag } from "@/components/ui/CustomTag";
 import { CustomAvatar } from "@/components/ui/CustomAvatar";
-
-interface IBlog {
-  createdAt: string;
-  img: string;
-  title: string;
-  description: string;
-  tags: { label: string; category: string }[];
-  author: { name: string; avatar: string };
-}
+import { IBlog } from "@/types/coreTypes";
+import {formatDate} from '@/utils/coreUtils'
 
 interface IProps {
   data: IBlog;
@@ -18,7 +11,7 @@ interface IProps {
 
 export function BlogCard({ data, className, ...props }: IProps) {
 
-  const getTagVariant: (category: string) => string = (category: string) => {
+  const getTagVariant = (category: string) : string => {
     const categories: { [key: string]: string } = {
       web: "primary",
       studio: "success",
@@ -38,7 +31,7 @@ export function BlogCard({ data, className, ...props }: IProps) {
         <CustomAvatar />
         <div>
           <p className="text-sm">{data.author.name}</p>
-          <p className="text-xs c-text-gray">May 9, 2023</p>
+          <p className="text-xs c-text-gray">{formatDate(data.createdAt)}</p>
         </div>
       </div>
 
