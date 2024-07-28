@@ -12,7 +12,7 @@ export function ThemeButton() {
         	document.documentElement.classList.add('dark');
 			setTheme('dark');
 		}
-	});
+	}, []);
     const handleClickTheme = () => {
 		if (theme == 'light') {
         	document.documentElement.classList.add('dark');
