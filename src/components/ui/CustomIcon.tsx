@@ -9,7 +9,7 @@ type IProps = {
 } & ComponentProps<typeof HeroIcon.AcademicCapIcon>;
 
 const styles = {
-	base: 'size-6 text-primary-500'
+	base: '!bg-inherit size-6 text-primary-500'
 }
 
 export function CustomIcon({ name, className, ...props }: IProps) {

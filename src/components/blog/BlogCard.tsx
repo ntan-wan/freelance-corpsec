@@ -24,7 +24,7 @@ export function BlogCard({ data, className, ...props }: IProps) {
   return (
     <div>
       <div className="relative h-60">
-        <Image className="rounded-2xl w-full object-cover" src={data.img} alt="Blog Image" fill />
+        <Image className="rounded-2xl w-full object-cover" src={data.img} alt="Blog Image" fill sizes="(min-width:1024) 30vw"/>
       </div>
 
       <div className="mt-4 flex items-center gap-2">

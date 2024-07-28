@@ -48,7 +48,7 @@ export default function HomePage() {
         </div>
 
         <div className="w-full relative min-h-[80vh] lg:w-6/12">
-          <Image className="rounded-md w-full object-cover" src="/imgs/hero.jpg" alt="hero" fill sizes="" />
+          <Image className="rounded-md w-full object-cover" src="/imgs/hero.jpg" alt="hero" fill sizes="(min-width:1024) 50vw" priority/>
         </div>
       </section>
 
@@ -70,16 +70,16 @@ export default function HomePage() {
 
           <div className="grid grid-cols-2 grid-rows-12 gap-4 lg:gap-8 w-full  min-h-[500px] lg:w-6/12">
             <div className="row-start-1 row-end-9 bg-cover rounded-md relative">
-              <Image className="rounded-md object-cover" sizes="" src="/imgs/dummy-benefit1.jpg" fill alt="dummy" />
+              <Image className="rounded-md object-cover" sizes="(min-width:1024px) 20vw" src="/imgs/dummy-benefit1.jpg" fill alt="dummy"/>
             </div>
             <div className="bg-cover rounded-md row-start-9 row-end-13 relative">
-              <Image className="rounded-md object-cover" sizes="" src="/imgs/dummy-benefit2.jpg" fill alt="dummy" />
+              <Image className="rounded-md object-cover" sizes="(min-width:1024px) 20vw" src="/imgs/dummy-benefit2.jpg" fill alt="dummy" />
             </div>
             <div className="bg-cover rounded-md relative row-start-1 row-end-5">
-              <Image className="rounded-md object-cover" sizes="" src="/imgs/dummy-benefit3.jpg" fill alt="dummy" />
+              <Image className="rounded-md object-cover" sizes="(min-width:1024px) 20vw" src="/imgs/dummy-benefit3.jpg" fill alt="dummy" />
             </div>
             <div className="row-start-5 row-end-13 bg-cover rounded-md relative">
-              <Image className="rounded-md object-cover" sizes="" src="/imgs/dummy-benefit4.jpg" fill alt="dummy" />
+              <Image className="rounded-md object-cover" sizes="(min-width:1024px) 20vw" src="/imgs/dummy-benefit4.jpg" fill alt="dummy" />
             </div>
           </div>
         </div>
@@ -113,7 +113,7 @@ export default function HomePage() {
           ))}
         </div>
 
-        <div className="mt-8 lg:mt-10 text-center border border-blue-50 bg-blue-50 p-4 sm:p-8 rounded-md w-full mx-auto lg:w-6/12 ">
+        <div className="mt-8 lg:mt-10 text-center border border-blue-50 bg-blue-50 p-4 sm:p-8 rounded-md w-full mx-auto lg:w-6/12 c-darkmode dark:border-white">
           <h2 className="font-semibold text-xl">Still have questions?</h2>
           <p className="mt-3 c-text-gray text-[14px]">
             We&apos;re sorry we couldn&apos;t provide with the information you were looking for. Please contact us and we&apos;ll be happy to help.
@@ -140,7 +140,7 @@ export default function HomePage() {
 
       {/* Email */}
       <section className="pt-16 flex flex-col justify-center">
-        <div className="bg-blue-50 rounded-2xl p-4 lg:p-12">
+        <div className="bg-blue-50 rounded-2xl p-4 lg:p-12 border border-transparent c-darkmode dark:border-white">
           <div className="w-full lg:w-6/12">
             <p className="c-title">Enter your email address and get started for free</p>
             <p className="mt-4 c-text-gray">Stay up to date with the most relevant information, our new collections, news and special offers!</p>

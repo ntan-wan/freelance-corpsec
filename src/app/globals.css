@@ -4,7 +4,11 @@
 
 @layer base {
 	body {
-		@apply min-h-screen flex flex-col;
+		@apply min-h-screen flex flex-col transition-colors;
+	}
+
+	* {
+		@apply c-darkmode;
 	}
 }
 
@@ -15,6 +19,10 @@
 }
 
 @layer utilities {
+
+	.c-darkmode {
+		@apply dark:bg-slate-950 dark:text-white;
+	}
 
 	.c-section {
 		min-height: calc(100vh - 74px);
