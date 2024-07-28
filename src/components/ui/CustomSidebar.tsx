@@ -39,7 +39,7 @@ export function CustomSidebar({ position = "left", isOpen = false, title = "Menu
   const { globalState, setState }: { [key: string]: any } = useGlobal();
 
   const styles = {
-    base: "w-[278px] bg-white text-gray-800 h-full fixed z-20 transition-all duration-300",
+    base: "w-[278px] bg-white text-gray-800 h-full fixed z-20 transition-all duration-300 c-darkmode lg:hidden",
   };
   const sidebarClassArgs = [
     styles.base,
@@ -60,7 +60,7 @@ export function CustomSidebar({ position = "left", isOpen = false, title = "Menu
 
         <ul className="px-4">
           {items.map((item) => (
-            <li key={item.label} className="text-gray-900">
+            <li key={item.label} className="text-gray-900 c-darkmode">
               <Link className="block w-full px-2 py-2 hover:bg-primary-50 transition-colors" href="/">
                 {item.label}
               </Link>
