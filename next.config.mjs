@@ -7,8 +7,16 @@ const analyzer = NextBundleAnalyzer({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-		loader: 'custom',
-		loaderFile: './src/utils/loader.ts',
+        // loader: "custom",
+        // loaderFile: "./src/utils/loader.ts",
+        remotePatterns: [
+            {
+                protocol: "https",
+				hostname: "freelance-corpsec.onrender.com",
+                port: "",
+                pathname: "/imgs/**",
+            },
+        ],
     },
 };
 
