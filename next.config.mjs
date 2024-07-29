@@ -10,9 +10,9 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: "https",
-                hostname: "freelance-corpsec.onrender.com",
+		        hostname: "freelance-corpsec.onrender.com",
                 port: "",
-                pathname: "/home/**",
+                pathname: "/imgs/**",
             },
         ],
     },
