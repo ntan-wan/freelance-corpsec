@@ -1,4 +1,22 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+import NextBundleAnalyzer from "@next/bundle-analyzer";
 
-export default nextConfig;
+const analyzer = NextBundleAnalyzer({
+    enabled: process.env.ANALYZE === "true",
+});
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    images: {
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "freelance-corpsec.onrender.com",
+                port: "",
+                pathname: "/home/**",
+            },
+        ],
+    },
+};
+
+//# run: ANALYZE=true npm run build
+export default analyzer(nextConfig);
