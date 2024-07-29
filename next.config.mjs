@@ -9,14 +9,14 @@ const nextConfig = {
     images: {
         // loader: "custom",
         // loaderFile: "./src/utils/loader.ts",
-        remotePatterns: [
-            {
-                protocol: "https",
-				hostname: "freelance-corpsec.onrender.com",
-                port: "",
-                pathname: "/imgs/**",
-            },
-        ],
+        // remotePatterns: [
+        //     {
+        //         protocol: "https",
+		// 		hostname: "freelance-corpsec.onrender.com",
+        //         port: "",
+        //         pathname: "/imgs/**",
+        //     },
+        // ],
     },
 };
 
