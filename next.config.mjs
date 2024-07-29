@@ -5,7 +5,9 @@ const analyzer = NextBundleAnalyzer({
 });
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+	output:'export'
+};
 
 //# run: ANALYZE=true npm run build
 export default analyzer(nextConfig);
