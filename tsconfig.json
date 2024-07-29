@@ -24,7 +24,8 @@
 	  "@/utils/*": ["./src/utils/*"],
 	  "@/types/*": ["./src/types/*"],
 	  "@/providers/*": ["./src/providers/*"],
-	  "@/json/*": ["./public/jsons/*"]
+	  "@/json/*": ["./public/jsons/*"],
+	  "@/imgs/*": ["./public/imgs/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

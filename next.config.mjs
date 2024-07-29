@@ -6,16 +6,10 @@ const analyzer = NextBundleAnalyzer({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        remotePatterns: [
-            {
-                protocol: "https",
-		        hostname: "freelance-corpsec.onrender.com",
-                port: "",
-                pathname: "/imgs/**",
-            },
-        ],
-    },
+    // images: {
+	// 	loader: 'custom',
+	// 	loaderFile: './loader.ts',
+    // },
 };
 
 //# run: ANALYZE=true npm run build

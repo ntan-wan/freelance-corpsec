@@ -8,6 +8,7 @@ import { QuestionAccordion } from "@/components/ui/QuestionAccordion";
 import blogs from "@/json/blogs.json";
 import FAQ from "@/json/FAQ.json";
 import { CustomTag } from "@/components/ui/CustomTag";
+import heroImg from '@/imgs/hero.jpg'
 
 export default function HomePage() {
     const clients: { label: string; icon: HeroIcons }[] = [
@@ -48,7 +49,7 @@ export default function HomePage() {
                 </div>
 
                 <div className="w-full relative min-h-[80vh] lg:w-6/12">
-                    <Image className="rounded-md w-full object-cover" src="/imgs/hero.jpg" alt="hero" fill sizes="(min-width:1024) 50vw" priority />
+                    <Image className="rounded-md w-full object-cover" src={heroImg} alt="hero" fill sizes="(min-width:1024) 50vw" priority />
                 </div>
             </section>
 
