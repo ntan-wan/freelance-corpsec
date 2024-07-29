@@ -48,7 +48,7 @@ export default function HomePage() {
                 </div>
 
                 <div className="w-full relative min-h-[80vh] lg:w-6/12">
-                    <Image className="rounded-md w-full object-cover" src="/imgs/hero.jpg" alt="hero" fill sizes="(min-width:1024) 50vw" priority />
+                    <Image className="rounded-md w-full object-cover" src="/static/hero.jpg" alt="hero" fill sizes="(min-width:1024) 50vw" priority />
                 </div>
             </section>
 
